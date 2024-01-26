@@ -31,7 +31,7 @@ export const create = async (req, res) => {
 };
 
 // For getting all users
-export const getAll = async (req, res) => {
+export const getAllUsers = async (req, res) => {
   try {
     const userData = await User.find();
     if (!userData) {
@@ -44,3 +44,15 @@ export const getAll = async (req, res) => {
 };
 
 // For getting only one user
+export const getUserById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const userExist = await User.findById(id);
+    if (!userExist) {
+      return res.status(404).json({ message: "User not found." });
+    }
+    res.status(200).json(userExist);
+  } catch (error) {
+    res.status(500).json({ errorMessage: error.message });
+  }
+};
