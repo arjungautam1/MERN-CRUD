@@ -42,3 +42,5 @@ export const getAll = async (req, res) => {
     res.status(500).json({ errorMessage: error.message });
   }
 };
+
+// For getting only one user
