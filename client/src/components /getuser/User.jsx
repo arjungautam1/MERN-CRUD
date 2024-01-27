@@ -26,10 +26,10 @@ const User = () => {
             <td>Canada</td>
             <td className="actionButtons">
               <Link to="/add" type="button" class="btn btn-danger">
-                Delete
+                <i class="fa-solid fa-trash"></i>
               </Link>
               <Link to={"/edit"} type="button" className="btn btn-info">
-                Update
+                <i class="fa-solid fa-pen-to-square"></i>
               </Link>
             </td>
           </tr>
