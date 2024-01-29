@@ -4,6 +4,7 @@
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
   background-color: white;
   padding: 50px;
+  border-radius: 5px;
 }
 .userTable table {
   width: 100%;
