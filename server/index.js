@@ -7,7 +7,7 @@ import route from "./routes/userRoute.js";
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors()); // Add this while connecting react and server app
 dotenv.config();
 
 const PORT = process.env.PORT || 7000;

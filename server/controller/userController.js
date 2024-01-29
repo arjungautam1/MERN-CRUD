@@ -23,7 +23,9 @@ export const create = async (req, res) => {
     }
     const savedData = await newUser.save();
     // Return the saved user data in the response
-    res.status(200).json(savedData);
+    // res.status(200).json(savedData);
+    // This Added only for displaying in toast
+    res.status(200).json({ message: "User Created Successfully." });
   } catch (error) {
     // Improved error handling
     res.status(500).json({ errorMessage: error.message });
