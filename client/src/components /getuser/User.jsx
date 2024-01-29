@@ -28,7 +28,7 @@ const User = () => {
               <Link to="/add" type="button" class="btn btn-danger">
                 <i class="fa-solid fa-trash"></i>
               </Link>
-              <Link to={"/edit"} type="button" className="btn btn-info">
+              <Link to={"/update"} type="button" className="btn btn-info">
                 <i class="fa-solid fa-pen-to-square"></i>
               </Link>
             </td>
