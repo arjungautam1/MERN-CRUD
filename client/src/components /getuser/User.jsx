@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const User = () => {
   return (
     <div className="userTable">
-      <Link to="/add" type="button" class="btn btn-primary">
+      <Link to="/add" type="button" className="btn btn-primary">
         Add User
       </Link>
       <table className="table table-bordered ">
@@ -25,11 +25,11 @@ const User = () => {
             <td>john@gmail.com</td>
             <td>Canada</td>
             <td className="actionButtons">
-              <Link to="/add" type="button" class="btn btn-danger">
-                <i class="fa-solid fa-trash"></i>
+              <Link to="/add" type="button" className="btn btn-danger">
+                <i className="fa-solid fa-trash"></i>
               </Link>
               <Link to={"/update"} type="button" className="btn btn-info">
-                <i class="fa-solid fa-pen-to-square"></i>
+                <i className="fa-solid fa-pen-to-square"></i>
               </Link>
             </td>
           </tr>

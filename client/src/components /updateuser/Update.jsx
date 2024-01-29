@@ -6,7 +6,7 @@ const Update = () => {
   return (
     <div className="addUser">
       <Link to="/" type="button" className="btn btn-secondary">
-        <i class="fa-solid fa-backward"></i> Back
+        <i className="fa-solid fa-backward"></i> Back
       </Link>
       <h3>Update User</h3>
       <form className="addUserForm">
