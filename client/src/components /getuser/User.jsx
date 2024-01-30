@@ -7,27 +7,28 @@ import toast from "react-hot-toast";
 const User = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get("http://localhost:8000/api/users");
-      setUsers(response.data);
-    };
-    fetchData();
-  }, []);
-
-  // To handle the error of first while there is no data.
   // useEffect(() => {
   //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get("http://localhost:8000/api/users");
-  //       setUsers(response.data);
-  //     } catch (error) {
-  //       console.log("Error fetching data:", error);
-  //       // Handle the error, show a message, or take appropriate action
-  //     }
+  //     const response = await axios.get("http://localhost:8000/api/users");
+  //     setUsers(response.data);
   //   };
   //   fetchData();
   // }, []);
+
+  // To handle the error of first while there is no data.
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/api/users");
+        setUsers(response.data);
+      } catch (error) {
+        // console.log("Error fetching data:", error);
+        toast.error("Error While Fetching Data");
+        // Handle the error, show a message, or take appropriate action
+      }
+    };
+    fetchData();
+  }, []);
 
   const deleteUser = async (userId) => {
     await axios
