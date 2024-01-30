@@ -88,7 +88,8 @@ export const update = async (req, res) => {
       new: true,
     });
     // Send the updated data as a response
-    res.status(200).json(updatedData);
+    // res.status(200).json(updatedData);
+    res.status(200).json({ message: "User Updated Successfully." });
   } catch (error) {
     // Handle any errors that occur during the update process
     res.status(500).json({ errorMessage: error.message });

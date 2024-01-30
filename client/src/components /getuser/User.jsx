@@ -42,7 +42,11 @@ const User = () => {
                   <Link to="/add" type="button" className="btn btn-danger">
                     <i className="fa-solid fa-trash"></i>
                   </Link>
-                  <Link to={"/update"} type="button" className="btn btn-info">
+                  <Link
+                    to={`/update/` + user._id} // To be done only in update section
+                    type="button"
+                    className="btn btn-info"
+                  >
                     <i className="fa-solid fa-pen-to-square"></i>
                   </Link>
                 </td>

@@ -33,7 +33,6 @@ const Add = () => {
         navigate("/");
       })
       .catch((error) => console.log(error));
-    // toast.success(response.data.message, { position: "top-left" });
   };
 
   return (
