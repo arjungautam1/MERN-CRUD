@@ -29,7 +29,7 @@ const Add = () => {
       .post("http://localhost:8000/api/user", user)
       .then((response) => {
         console.log(response.data.message);
-        toast.success(response.data.message, { position: "top-left" });
+        toast.success(response.data.message, { position: "top-right" });
         navigate("/");
       })
       // .catch((error) => console.log(error));
